@@ -1,0 +1,87 @@
+<odoo>
+    <!-- Define the action first -->
+    <record id="action_student_info" model="ir.actions.act_window">
+        <field name="name">Students</field>
+        <field name="res_model">school.student</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_teacher_info" model="ir.actions.act_window">
+        <field name="name">Teachers</field>
+        <field name="res_model">school.teacher</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_class_info" model="ir.actions.act_window">
+        <field name="name">Classes</field>
+        <field name="res_model">school.class</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_course_info" model="ir.actions.act_window">
+        <field name="name">Courses</field>
+        <field name="res_model">school.course</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Root Menu -->
+    <menuitem
+        id="sms_menu_root"
+        name="School Management"
+        sequence="1"
+        web_icon="sms,static/description/icon.png"/>
+
+    <!-- STUDENTS MENU -->
+    <menuitem
+        id="sms_menu_students"
+        name="Students"
+        parent="sms_menu_root"
+        sequence="1"/>
+
+    <menuitem
+        id="sms_menu_students_info"
+        name="Student Information"
+        parent="sms_menu_students"
+        action="action_student_info"
+        sequence="1"/>
+
+    <menuitem
+        id="sms_menu_teachers"
+        name="Teachers"
+        parent="sms_menu_root"
+        sequence="1"/>
+
+    <menuitem
+        id="sms_menu_teacher_info"
+        name="Teacher Information"
+        parent="sms_menu_teachers"
+        action="action_teacher_info"
+        sequence="1"/>
+
+    <menuitem
+        id="sms_menu_class"
+        name="Classes"
+        parent="sms_menu_root"
+        sequence="1"/>
+
+    <menuitem
+        id="sms_menu_class_info"
+        name="Classes Information"
+        parent="sms_menu_class"
+        action="action_class_info"
+        sequence="1"/>
+
+
+    <menuitem
+        id="sms_menu_course"
+        name="Courses"
+        parent="sms_menu_root"
+        sequence="1"/>
+
+    <menuitem
+        id="sms_menu_courses_info"
+        name="Courses Information"
+        parent="sms_menu_course"
+        action="action_course_info"
+        sequence="1"/>
+</odoo>

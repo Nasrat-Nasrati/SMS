@@ -19,6 +19,8 @@ This module helps manage the various aspects of a school, including:
     'category': 'Education',
     'depends': ['base'],
     'data': [
+    'views/menus.xml',
+    'security/ir.model.access.csv',
 
     ],
     'demo': [
