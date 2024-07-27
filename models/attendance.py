@@ -3,6 +3,7 @@ from odoo import models, fields
 
 class Attendance(models.Model):
     _name = 'school.attendance'
+    _inherit = ['mail.thread', 'mail.activity.mixin']  # Add this line to inherit from mail.thread
     _description = 'Attendance'
 
     student_id = fields.Many2one('school.student', string='Student', required=True)

@@ -17,11 +17,18 @@ This module helps manage the various aspects of a school, including:
     'author': 'Nasrat Nasrati',
     'website': 'https://www.yourwebsite.com',
     'category': 'Education',
-    'depends': ['base'],
+    'depends': ['base', 'mail'],
     'data': [
-    'views/menus.xml',
-    'security/ir.model.access.csv',
 
+        'security/ir.model.access.csv',
+        'views/menus.xml',
+        'views/student.xml',
+        'views/teacher.xml',
+        'views/class.xml',
+        'views/course.xml',
+        'views/grade.xml',
+        'views/attendance.xml',
+        # 'views/student_fess.xml',
     ],
     'demo': [
 
@@ -29,4 +36,16 @@ This module helps manage the various aspects of a school, including:
     'installable': True,
     'application': True,
     'license': 'LGPL-3',
+
+    'qweb': [
+        'static/src/xml/user_menu.xml',
+
+    ],
+    'assets': {
+        'web.assets_backend': [
+            'SMS/static/src/js/extended_user_menu.js',
+
+
+        ],
+    }
 }

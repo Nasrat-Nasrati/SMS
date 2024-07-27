@@ -1,7 +1,9 @@
 from odoo import models, fields
 
+
 class Class(models.Model):
     _name = 'school.class'
+    _inherit = ['mail.thread', 'mail.activity.mixin']  # Add this line to inherit from mail.thread
     _description = 'Class'
 
     name = fields.Char(string='Name', required=True)

@@ -2,6 +2,7 @@ from odoo import models, fields
 
 class Grade(models.Model):
     _name = 'school.grade'
+    _inherit = ['mail.thread', 'mail.activity.mixin']  # Add this line to inherit from mail.thread
     _description = 'Grade'
 
     student_id = fields.Many2one('school.student', string='Student', required=True)
